@@ -98,6 +98,7 @@ public class Main {
                     System.out.println("Elija la opcion que requiera");
                     System.out.println("1. Mostrar a todos los pacientes");
                     System.out.println("2. Mostrar pacientes por tipo");
+                    System.out.println("3. Mostrar pacientes con consulta costosa");
                     int a = teclado.nextInt();
                     switch (a){
                         case 1:
@@ -130,6 +131,14 @@ public class Main {
                                         }
                                     }break;
                             }break;
+                        case 3:
+                            System.out.println("Pacientes con consulta costosa");
+                            for (Paciente E3 : lstPacientes) {
+                                if (E3.consultaCostosa()==true) {
+                                    System.out.println(E3);
+                                }
+                            }
+                            break;
                     }break;
 
             }
