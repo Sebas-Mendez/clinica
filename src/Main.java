@@ -79,10 +79,61 @@ public class Main {
                         if ( p.getDocumento() == paciente){
                             pa1 = p;
                             System.out.println(pa1);
+                            System.out.println("Desea calcular el costo de la consulta?");
+                            System.out.println("1. SI");
+                            System.out.println("2. NO");
+                            int c = teclado.nextInt();
+                            switch (c){
+                                case 1:
+                                    p.costoFinal();
+                                    break;
+                                case 2:
+                                    break;
+
+                            }break;
                         }
-                    }
+                    }break;
+                case 3:
+                    System.out.println("Sistema de muestra de pacientes");
+                    System.out.println("Elija la opcion que requiera");
+                    System.out.println("1. Mostrar a todos los pacientes");
+                    System.out.println("2. Mostrar pacientes por tipo");
+                    int a = teclado.nextInt();
+                    switch (a){
+                        case 1:
+                            for (Paciente P1 : lstPacientes) {
+                                System.out.println(P1);
+                            }break;
+                        case 2:
+                            System.out.println("Ingrese el tipo de paciente que requiera");
+                            System.out.println("1. Particular");
+                            System.out.println("2. Eps");
+                            System.out.println("3. VIP");
+                            int b = teclado.nextInt();
+                            switch (b){
+                                case 1:
+                                    for (Paciente P2: lstPacientes){
+                                        if (P2 instanceof pacienteParticular){
+                                            System.out.println(P2);
+                                        }
+                                    }break;
+                                case 2:
+                                    for (Paciente P3: lstPacientes){
+                                        if (P3 instanceof pacienteEPS){
+                                            System.out.println(P3);
+                                        }
+                                    }break;
+                                case 3:
+                                    for (Paciente P4: lstPacientes){
+                                        if (P4 instanceof pacienteVIP){
+                                            System.out.println(P4);
+                                        }
+                                    }break;
+                            }break;
+                    }break;
+
             }
 
-        }while (opc != 3);
+        }while (opc != 4);
     }
 }

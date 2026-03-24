@@ -33,7 +33,7 @@ public class pacienteVIP extends Paciente{
                 '}';
     }
 
-    public void descFidel(){
+    public void costoFinal(){
 
         if(aniosFidelidad <5){
             double discount = costoConsulta * (0.2);
@@ -65,4 +65,5 @@ public class pacienteVIP extends Paciente{
         }
 
     }
+
 }
